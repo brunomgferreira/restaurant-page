@@ -10,6 +10,15 @@ module.exports = {
         filename: '[name].js',
         assetModuleFilename: '[name][ext]',
     },
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
+        open: true,
+        hot: true,
+        compress: true,
+        historyApiFallback: true,
+    },
     module: {
         rules : [
             {
